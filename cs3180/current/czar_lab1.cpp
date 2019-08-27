@@ -54,6 +54,7 @@ void load_array(int coeff[], int num)
 void horner(int coeff[], int num)
 {
 	int x = ask_for_x();
+	cout << "Value of x: " << x << endl;
 	if(x != -1000)
 	{
 		float answer = coeff[0];
