@@ -32,6 +32,7 @@ int ask_for_x()
 	int x;
 	cout << "(Enter -1000 to quit)\nEnter the value of x: ";
 	cin >> x;
+	return x;
 }
 int get_num()
 {
