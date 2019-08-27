@@ -43,7 +43,7 @@ int get_num()
 
 void load_array(int coeff[], int num)
 {
-	for(int i = 0, i < num, i++)
+	for(int i = 0; i < num; i++)
 	{
 		cout << "Enter the " << i+1 << " coefficient: ";
 		cin >> coeff[i];
@@ -57,7 +57,7 @@ float horner(int coeff[], int num)
 	if(x != -1000)
 	{
 		answer = coeff[0];
-		for(int i=1; i<num, i++)
+		for(int i=1; i<num; i++)
 			answer = answer*x + coeff[i];
 		cout << "The result is: " << answer << endl;
 	}
