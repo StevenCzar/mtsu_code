@@ -11,7 +11,7 @@
 using namespace std;
 
 //function prototypes
-float horner(int coeff[], int num);
+void horner(int coeff[], int num);
 void load_array(int coeff[], int num);
 int get_num();
 int ask_for_x();
@@ -51,16 +51,18 @@ void load_array(int coeff[], int num)
 	return;
 }
 
-float horner(int coeff[], int num)
+void horner(int coeff[], int num)
 {
 	int x = ask_for_x();
 	if(x != -1000)
 	{
-		answer = coeff[0];
+		float answer = coeff[0];
 		cout << answer << endl;
 		for(int i=1; i<num; i++)
-			answer = answer*x + coeff[i];
+		{
+			answer = (answer*x + coeff[i]);
 			cout << answer << endl;
+		}
 		cout << "The result is: " << answer << endl;
 	}
 	return;
