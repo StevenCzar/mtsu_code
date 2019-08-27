@@ -25,7 +25,6 @@ int main()
 void hello()
 {
 	string name;
-	bool is_valid;
 	cout << "Please enter your name: ";
 	cin >> name;
 	cout << "Hello " + name + "!\n";
