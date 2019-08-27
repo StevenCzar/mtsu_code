@@ -28,6 +28,6 @@ void hello()
 	bool is_valid;
 	cout << "Please enter your name: ";
 	cin >> name;
-	cout << "\n Hello " + name + "!";
+	cout << "Hello " + name + "!\n";
 	return;
 }
