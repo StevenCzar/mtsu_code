@@ -8,6 +8,7 @@
 
 //dependencies
 #include <string>
+#include <iostream>
 using namespace std;
 
 //function prototypes
