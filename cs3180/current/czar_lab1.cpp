@@ -69,7 +69,7 @@ void horner(int coeff[], int num)
 		{
 			float answer = coeff[num];
 			cout << answer << endl;
-			for(int i=num; i>=0; i--)
+			for(int i=num-1; i>=0; i--)
 			{
 				answer = (answer*x + coeff[i]);
 				cout << "Coefficent: " << coeff[i] << endl;
