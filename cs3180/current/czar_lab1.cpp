@@ -37,7 +37,7 @@ int ask_for_x()
 int get_num()
 {
 	int num;
-	cout << "Enter the number of coefficients: ";
+	cout << "Enter the degree of your polynomial: ";
 	cin >> num;
 	return num;
 }
@@ -46,7 +46,14 @@ void load_array(int coeff[], int num)
 {
 	for(int i = num; i >= 0; i--)
 	{
-		cout << "Enter coefficent for x^"<< i << ": ";
+		if(i!=0)
+		{
+			cout << "Enter coefficent for x^"<< i << ": ";
+		}
+		else
+		{
+			cout << "Constant term? ";
+		}
 		cin >> coeff[i];
 	}
 	return;
@@ -54,19 +61,21 @@ void load_array(int coeff[], int num)
 
 void horner(int coeff[], int num)
 {
-	int x = ask_for_x();
-	cout << "Value of x: " << x << endl;
-	if(x != -1000)
-	{
-		float answer = coeff[0];
-		cout << answer << endl;
-		for(int i=1; i<num; i++)
+	do{
+		int x = ask_for_x();
+		cout << "Value of x: " << x << endl;
+		if(x != -1000)
 		{
-			answer = (answer*x + coeff[i]);
-			cout << "Coefficent: " << coeff[i] << endl;
-			cout << "Answer: " << answer << endl;
+			float answer = coeff[0];
+			cout << answer << endl;
+			for(int i=1; i<num; i++)
+			{
+				answer = (answer*x + coeff[i]);
+				cout << "Coefficent: " << coeff[i] << endl;
+				cout << "Answer: " << answer << endl;
+			}
+			cout << "The result is: " << answer << endl;
 		}
-		cout << "The result is: " << answer << endl;
-	}
+	}while(x!=-1000);
 	return;
 }
