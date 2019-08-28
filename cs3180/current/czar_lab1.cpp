@@ -68,18 +68,14 @@ void horner(int coeff[], int num)
 	do{
 		//gets value of x
 		int x = ask_for_x();
-		cout << "Value of x: " << x << endl;
 		if(x != -1000)
 		{
 			//initialize answer
 			float answer = coeff[num];
-			cout << answer << endl;
 			for(int i=num-1; i>=0; i--)
 			{
 				//do multiplication and addition
 				answer = (answer*x + coeff[i]);
-				cout << "Coefficent: " << coeff[i] << endl;
-				cout << "Answer: " << answer << endl;
 			}
 			cout << "The result is: " << answer << endl;
 		}
