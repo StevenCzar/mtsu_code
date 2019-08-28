@@ -27,6 +27,7 @@ int main()
 }
 
 //functions
+//Function that prompts user to enter the value of X
 int ask_for_x()
 {
 	int x;
@@ -34,6 +35,7 @@ int ask_for_x()
 	cin >> x;
 	return x;
 }
+//Function that prompts user to enter the degree of largest polynomial
 int get_num()
 {
 	int num;
@@ -41,7 +43,7 @@ int get_num()
 	cin >> num;
 	return num;
 }
-
+//Function that loads the array with user input for horner
 void load_array(int coeff[], int num)
 {
 	for(int i = num; i >= 0; i--)
@@ -58,19 +60,23 @@ void load_array(int coeff[], int num)
 	}
 	return;
 }
-
+//Function that applies horner's algorithm
 void horner(int coeff[], int num)
 {
+	//final check for loop
 	bool check = true;
 	do{
+		//gets value of x
 		int x = ask_for_x();
 		cout << "Value of x: " << x << endl;
 		if(x != -1000)
 		{
+			//initialize answer
 			float answer = coeff[num];
 			cout << answer << endl;
 			for(int i=num-1; i>=0; i--)
 			{
+				//do multiplication and addition
 				answer = (answer*x + coeff[i]);
 				cout << "Coefficent: " << coeff[i] << endl;
 				cout << "Answer: " << answer << endl;
@@ -79,6 +85,7 @@ void horner(int coeff[], int num)
 		}
 		else
 		{
+			//if x = -1000, will flag for quit
 			check = false;
 		}
 	}while(check);
