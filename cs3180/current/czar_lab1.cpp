@@ -61,6 +61,7 @@ void load_array(int coeff[], int num)
 
 void horner(int coeff[], int num)
 {
+	bool check = true;
 	do{
 		int x = ask_for_x();
 		cout << "Value of x: " << x << endl;
@@ -76,6 +77,10 @@ void horner(int coeff[], int num)
 			}
 			cout << "The result is: " << answer << endl;
 		}
-	}while(x!=-1000);
+		else
+		{
+			check = false;
+		}
+	}while(check);
 	return;
 }
