@@ -44,9 +44,9 @@ int get_num()
 
 void load_array(int coeff[], int num)
 {
-	for(int i = 0; i < num; i++)
+	for(int i = num; i >= 0; i--)
 	{
-		cout << "Enter coefficent "<< i+1 << ": ";
+		cout << "Enter coefficent for x^"<< i << ": ";
 		cin >> coeff[i];
 	}
 	return;
