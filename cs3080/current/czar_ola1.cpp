@@ -26,7 +26,7 @@ void hello()
 {
 	string name;
 	cout << "Please enter your name: ";
-	cin >> name;
+	getline(cin,name);
 	cout << "Hello " + name + "!\n";
 	return;
 }
