@@ -17,9 +17,9 @@
 using namespace std;
 
 //function prototypes
-void forward_taylor(double x, int n, double h);
-void backward_taylor(double x, int n, double h);
-void centered_taylor(double x, int n, double h);
+void forward_taylor(double x, int n, double h, double ans);
+void backward_taylor(double x, int n, double h, double ans);
+void centered_taylor(double x, int n, double h, double ans);
 double get_x();
 int get_n();
 
