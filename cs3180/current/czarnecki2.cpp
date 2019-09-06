@@ -51,7 +51,7 @@ void forward_taylor(double x, int n, double h)
 {
 	double approx, error;
 	double ans = sin(x);
-	cout << "i\t\t h\t\t value\t\t error\n"
+	cout << "i\t\t h\t\t value\t\t error\n";
 	for(int i = 0; i < n; i++)
 	{
 		h = h*.25;
