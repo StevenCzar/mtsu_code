@@ -65,14 +65,21 @@ void forward_taylor(double x, int n, double h, double ans)
 	//loops n times and prints info
 	for(int i = 0; i < n; i++)
 	{
+		//increment step
 		h = h*.25;
+		//get approx with new step
 		approx = (sin(x+h) - sin(x))/h;
+		//calculate new error bound
 		error = fabs(ans - approx);
 		cout << (i+1) << "\t\t" << h << "\t\t" << 
 		approx << "\t\t" << error << endl;
 	}
 	return;
 }
+//Loops in functions work the same as previous with 
+//slight derivation, so refer to previous function
+//comments if needed.
+
 //function for backward difference taylor series
 void backward_taylor(double x, int n, double h, double ans)
 {
