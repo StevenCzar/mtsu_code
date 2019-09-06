@@ -40,7 +40,7 @@ double get_x()
 	cin >> x;
 	return x;
 }
-double get_n()
+int get_n()
 {
 	int n;
 	cout << "Enter the value for n: ";
@@ -64,7 +64,7 @@ void forward_taylor(double x, int n, double h)
 }
 void backward_taylor(double x, int n, double h)
 {
-	cout << "i\t\t value\t\t error\n"
+	cout << "i\t\t value\t\t error\n";
 	for(int i = 0; i < n; i++)
 	{
 		
@@ -72,7 +72,7 @@ void backward_taylor(double x, int n, double h)
 }
 void centered_taylor(double x, int n, double h)
 {
-	cout << "i\t\t value\t\t error\n"
+	cout << "i\t\t value\t\t error\n";
 	for(int i = 0; i < n; i++)
 	{
 		
