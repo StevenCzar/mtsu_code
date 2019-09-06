@@ -60,7 +60,6 @@ void forward_taylor(double x, int n, double h, double ans)
 {
 	//Initilize values
 	double approx, error;
-	double ans = cos(x);
 	cout << "******FORWARDS******\n";
 	cout << "i\t\t h\t\t value\t\t error\n";
 	//loops n times and prints info
@@ -78,7 +77,6 @@ void forward_taylor(double x, int n, double h, double ans)
 void backward_taylor(double x, int n, double h, double ans)
 {
 	double approx, error;
-	double ans = cos(x);
 	cout << "******BACKWARDS******\n";
 	cout << "i\t\t h\t\t value\t\t error\n";
 	for(int i = 0; i < n; i++)
@@ -95,7 +93,6 @@ void backward_taylor(double x, int n, double h, double ans)
 void centered_taylor(double x, int n, double h, double ans)
 {
 	double approx, error;
-	double ans = cos(x);
 	cout << "******CENTERED******\n";
 	cout << "i\t\t h\t\t value\t\t error\n";
 	for(int i = 0; i < n; i++)
