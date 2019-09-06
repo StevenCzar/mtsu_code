@@ -6,6 +6,10 @@
   Due date: 09/05/2019
   */
 
+//NOTE: Tested using g++ compiler on Linux and worked correctly
+//Well, some poor tabbing but lack of time to fix cosmetic issue
+//Code written using SublimeText and pushed via GitHub
+
 //dependencies
 #include <iostream>
 #include <iomanip>
@@ -22,13 +26,16 @@ int get_n();
 //main
 int main()
 {
+	//Initialize values
 	double h = 1;
 	double x = get_x();
 	int n = get_n();
-	cout << "Analytical solution: " << cos(x) << endl;
-	forward_taylor(x, n, h);
-	backward_taylor(x, n, h);
-	centered_taylor(x, n, h);
+	//Analytical solution uses cos as it is derivative of sin
+	double ans = cos(x);
+	cout << "Analytical solution: " << ans << endl;
+	forward_taylor(x, n, h, ans);
+	backward_taylor(x, n, h, ans);
+	centered_taylor(x, n, h, ans);
 
 	return 0;
 }
@@ -48,12 +55,15 @@ int get_n()
 	cin >> n;
 	return n;
 }
-void forward_taylor(double x, int n, double h)
+//function for forward difference taylor series
+void forward_taylor(double x, int n, double h, double ans)
 {
+	//Initilize values
 	double approx, error;
 	double ans = cos(x);
 	cout << "******FORWARDS******\n";
 	cout << "i\t\t h\t\t value\t\t error\n";
+	//loops n times and prints info
 	for(int i = 0; i < n; i++)
 	{
 		h = h*.25;
@@ -64,7 +74,8 @@ void forward_taylor(double x, int n, double h)
 	}
 	return;
 }
-void backward_taylor(double x, int n, double h)
+//function for backward difference taylor series
+void backward_taylor(double x, int n, double h, double ans)
 {
 	double approx, error;
 	double ans = cos(x);
@@ -80,7 +91,8 @@ void backward_taylor(double x, int n, double h)
 	}
 	return;
 }
-void centered_taylor(double x, int n, double h)
+//function for center difference taylor series
+void centered_taylor(double x, int n, double h, double ans)
 {
 	double approx, error;
 	double ans = cos(x);
