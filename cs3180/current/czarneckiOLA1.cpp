@@ -25,7 +25,7 @@ int main()
 	double h = 1;
 	double x = get_x();
 	int n = get_n();
-	cout << "Analytical solution: " << sin(x) << endl;
+	cout << "Analytical solution: " << cos(x) << endl;
 	forward_taylor(x, n, h);
 	backward_taylor(x, n, h);
 	centered_taylor(x, n, h);
@@ -51,7 +51,7 @@ int get_n()
 void forward_taylor(double x, int n, double h)
 {
 	double approx, error;
-	double ans = sin(x);
+	double ans = cos(x);
 	cout << "******FORWARDS******\n";
 	cout << "i\t\t h\t\t value\t\t error\n";
 	for(int i = 0; i < n; i++)
@@ -67,7 +67,7 @@ void forward_taylor(double x, int n, double h)
 void backward_taylor(double x, int n, double h)
 {
 	double approx, error;
-	double ans = sin(x);
+	double ans = cos(x);
 	cout << "******BACKWARDS******\n";
 	cout << "i\t\t h\t\t value\t\t error\n";
 	for(int i = 0; i < n; i++)
@@ -83,7 +83,7 @@ void backward_taylor(double x, int n, double h)
 void centered_taylor(double x, int n, double h)
 {
 	double approx, error;
-	double ans = sin(x);
+	double ans = cos(x);
 	cout << "******CENTERED******\n";
 	cout << "i\t\t h\t\t value\t\t error\n";
 	for(int i = 0; i < n; i++)
