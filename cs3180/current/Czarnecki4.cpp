@@ -39,6 +39,7 @@ int main()
 		//single precision
 		single_f1(x);
 		single_f2(x);
+		cout << "\n";
 		//increments by power of 10 per run
 		x = x*10;
 	}
