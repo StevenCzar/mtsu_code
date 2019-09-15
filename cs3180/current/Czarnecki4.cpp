@@ -51,6 +51,7 @@ int main()
 		//print same as above but with double precission
 		double_f1(y);
 		double_f2(y);
+		cout << "\n";
 		y = y*10;
 	}
 	return 0;
