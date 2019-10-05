@@ -16,7 +16,8 @@ using namespace std;
 //main
 int main()
 {
-	int rowA[10][10], rowB[10][10], colA, colB;
+	int rowA, rowB, colA, colB;
+	int matA[10][10], matB[10][10];
 	char choice;
 	bool valid = true;
 
