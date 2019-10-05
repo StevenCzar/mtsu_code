@@ -29,7 +29,7 @@ int main()
 	{
 		for(int j = 0; j < colA; j++)
 		{
-			cout << "Input matrix A (element [" << i << "][" << j << "]): "
+			cout << "Input matrix A (element [" << i << "][" << j << "]): ";
 			cin >> matA[i][j];
 		}
 	}
@@ -42,14 +42,14 @@ int main()
 	{
 		for(int j = 0; j < colB; j++)
 		{
-			cout << "Input matrix rowB(element [" << i << "][" << j << "]): "
+			cout << "Input matrix rowB(element [" << i << "][" << j << "]): ";
 			cin >> matB[i][j];
 		}
 	}	
 
 	cout << "Choose your operation: A for add, S for subtract, ";
 	cout << "M for multiply, N for AND, O for OR\n";
-	cin >> choice
+	cin >> choice;
 
 	if(choice == "A" || "a")
 	{
@@ -181,7 +181,7 @@ int main()
 	}
 	else
 	{
-		cout << "Invalid choice\n"
+		cout << "Invalid choice\n";
 	}
 	return 0;
 }
