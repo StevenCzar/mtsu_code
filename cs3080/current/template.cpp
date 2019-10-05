@@ -51,7 +51,7 @@ int main()
 	cout << "M for multiply, N for AND, O for OR\n";
 	cin >> choice;
 
-	if(choice == "A" || "a")
+	if(choice == "A" || choice == "a")
 	{
 		if((rowA != rowB)||(colA != colB)
 		{
@@ -72,7 +72,7 @@ int main()
 			}
 		}
 	}
-	else if(choice == "S" || "s")
+	else if(choice == "S" || choice == "s")
 	{
 		if((rowA != rowB)||(colA != colB)
 		{
@@ -93,7 +93,7 @@ int main()
 			}
 		}
 	}
-	else if(choice == "M" || "m")
+	else if(choice == "M" || choice == "m")
 	{
 		int temp[10][10];
 		if(rowA!=colB)
@@ -120,7 +120,7 @@ int main()
 			}
 		}
 	}
-	else if(choice == "N" || "n")
+	else if(choice == "N" || choice == "n")
 	{
 		int temp[10][10];
 		if(rowA!=colB)
@@ -151,7 +151,7 @@ int main()
 			}
 		}
 	}
-	else if(choice == "O" || "o")
+	else if(choice == "O" || choice == "o")
 	{
 		if((rowA != rowB)||(colA != colB)
 		{
