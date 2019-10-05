@@ -53,7 +53,7 @@ int main()
 
 	if(choice == "A" || choice == "a")
 	{
-		if((rowA != rowB)||(colA != colB)
+		if((rowA != rowB)||(colA != colB))
 		{
 			cout << "Invalid dimensions for operation" << endl;
 			valid = false;
@@ -74,7 +74,7 @@ int main()
 	}
 	else if(choice == "S" || choice == "s")
 	{
-		if((rowA != rowB)||(colA != colB)
+		if((rowA != rowB)||(colA != colB))
 		{
 			cout << "Invalid dimensions for operation" << endl;
 			valid = false;
