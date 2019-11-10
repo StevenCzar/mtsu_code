@@ -39,6 +39,7 @@ int main()
 			temp = apr[i][0];
 			apr[temp][0] = temp;
 			apr[temp][1] = apr[i][1];
+			cout << apr[i][0] << " " << apr[i][1] << endl;
 		}
 	}
 
