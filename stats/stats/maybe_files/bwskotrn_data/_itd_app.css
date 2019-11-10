@@ -1,0 +1,2 @@
+@import url('https://pipeline.mtsu.edu/css/ssb_app.css');
+DIV.pagefooterdiv .releasetext::after {content:' PROD - SSBPROD2';}

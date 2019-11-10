@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>PipelineMT</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<meta name="theme-color" content="#005ea4">
+
+
+<link rel="stylesheet" href="maybe_files/all-fontawesome.css">
+<link rel="stylesheet" href="maybe_files/fontawesome-v4-shims.css">
+
+<link href="maybe_files/pipeline.css" rel="stylesheet">
+<link href="maybe_files/print.css" rel="stylesheet" type="text/css" media="print">
+<script src="maybe_files/jquery-2.js"></script>
+<script src="maybe_files/scripts.js"></script>
+<script async="" src="maybe_files/js"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments)};
+gtag('js', new Date());
+gtag('config', 'UA-5283804-17');
+</script>
+<script type="text/javascript">
+var root = '/';
+$( document ).ready(function() {
+    $('#logout').on('click',function(){
+        //Kill SSB session
+        var iframe = document.createElement("iframe");
+        iframe.setAttribute("id", "killsession");
+        iframe.setAttribute("height", "0");
+        iframe.setAttribute("width", "0");
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("src", "https://ssb.mtsu.edu/pls/PROD/twbkwbis.P_Logout");
+        document.body.appendChild(iframe);
+        //Kill Pipeline session
+        window.location = root+'logout';
+    });
+});
+
+</script>
+<script type="text/javascript" async="" src="maybe_files/js_002"></script></head>
+<body class="">
+<!--START HEADER-->
+    <a class="sr-only" href="#main-content">Skip to Main Content</a>
+    <div id="timeout-overlay" style="display: none;"><!--x--></div>
+    <div id="timeout-content" style="display: none;">
+        <h2>Your session will expire in <span id="timeout-remaining"></span></h2>
+        <h3><a id="extend-session">EXTEND SESSION</a> or <a href="https://pipeline.mtsu.edu/logout">LOGOUT</a>?</h3>
+    </div>
+    <div id="overlay"><!--x--></div>
+    <div id="mtsu-quicklinks">
+        <div id="alert-rave"><!--x--></div>
+    	<div id="mtsu-logo" class=""><img src="maybe_files/mt-logo-sm.png" alt="MTSU Logo"></div>
+    	<div class="pull-right">
+    		<div id="desktop-menu">
+    			<ul class="quicklinks-nav">
+    				<li><a href="http://www.mtsu.edu/one-stop" title="MT One Stop" target="_blank"><img alt="MT One Stop" src="maybe_files/mt-one-stop.png"></a></li>
+    				<li><a href="http://elearn.mtsu.edu/" title="D2L" target="_blank" style="font-size:18px;font-weight:bold;">D2L</a></li>
+    				<li><a href="http://mtsu.edu/email/" title="Email" target="_blank" style="font-size:16px;"><i class="fas fa-envelope"></i><span class="sr-only">Email</span></a></li>
+                    <li class="account-info">Steven Czarnecki<span id="mnum-show" class="hidden">(<a>SHOW M#</a>)</span><span class="mobile-hide mnum-display account-info-block">(M01461468)<a id="mnum-hide">HIDE</a></span></li>                    <li class="account-info mobile-hide"><a id="logout"><i class="fas fa-sign-out" aria-hidden="true"><!--x--></i> Log Out</a></li>
+    			</ul>
+    		</div>
+            <div class="account-info mobile-show">
+                <a href="https://pipeline.mtsu.edu/logout" class="logout-link"><i class="fas fa-sign-out" aria-hidden="true"><!--x--></i> Log Out</a>
+            </div>
+            <a id="mobile-menu" title="menu"><i class="fas fa-bars"><!--x--></i><span class="sr-only">Toggle Menu</span></a>
+            <div class="clear"><!--x--></div>
+    	</div>
+    	<div class="clear"><!--x--></div>
+    </div>
+
+    <div id="mtsu-branding-bar">
+    	<div id="mtsu-branding-logo"><img alt="MTSU Logo" src="maybe_files/mtsu-logo.png"></div>
+    	PipelineMT    </div>
+<!--END HEADER-->
+	<div id="content-container">
+<!--START SIDE BAR-->
+		<nav class="navbar-default" role="navigation" id="side-menu">
+			<ul class="mobile-nav-option">
+				   <li><a href="http://www.mtsu.edu/one-stop" target="_blank" title="MT One Stop"><span class="nav-label menu-name"><img alt="MTOneStop" src="maybe_files/mt-one-stop-white.png"></span></a></li>
+				   <li><a href="http://elearn.mtsu.edu/" target="_blank" title="D2L"><span class="nav-label menu-name">D2L</span></a></li>
+				   <li><a href="http://mtsu.edu/email/" target="_blank" title="Email"><i class="fas fa-envelope"></i><span class="nav-label menu-name"><!--x--></span><span class="sr-only">Email</span></a></li>
+			   </ul>
+		   <ul class="nav side-nav">
+			   				   <li class="" id="" role="presentation">
+					   <a href="https://pipeline.mtsu.edu/home" role="menuitem">
+						   <i class="fas fa-home" aria-hidden="true"></i>
+						   <span class="nav-label menu-name">Home</span>
+						</a>
+				   </li>
+				   				   <li class="" id="" role="presentation">
+					   <a href="https://pipeline.mtsu.edu/registration" role="menuitem">
+						   <i class="fas fa-graduation-cap steel-icons" aria-hidden="true"></i>
+						   <span class="nav-label menu-name">Registration &amp; Student Records</span>
+						</a>
+				   </li>
+				   				   <li class="" id="" role="presentation">
+					   <a href="https://pipeline.mtsu.edu/academic-resources" role="menuitem">
+						   <i class="fas fa-pencil-alt teal-icons" aria-hidden="true"></i>
+						   <span class="nav-label menu-name">Academic Resources</span>
+						</a>
+				   </li>
+				   				   <li class="" id="" role="presentation">
+					   <a href="https://pipeline.mtsu.edu/financial-aid" role="menuitem">
+						   <i class="fas fa-money-bill-alt green-icons" aria-hidden="true"></i>
+						   <span class="nav-label menu-name">Financial Aid</span>
+						</a>
+				   </li>
+				   				   <li class="" id="" role="presentation">
+					   <a href="https://pipeline.mtsu.edu/billing-payment" role="menuitem">
+						   <i class="fas fa-dollar-sign green-icons" aria-hidden="true"></i>
+						   <span class="nav-label menu-name">Billing &amp; Payment</span>
+						</a>
+				   </li>
+				   				   <li class="" id="" role="presentation">
+					   <a href="https://pipeline.mtsu.edu/resources" role="menuitem">
+						   <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+						   <span class="nav-label menu-name">Resources</span>
+						</a>
+				   </li>
+				   		   </ul>
+		</nav>
+<!--END SIDE BAR-->
+		<div id="page-wrapper">
+            <a name="main-content"></a>
+            <div id="pipeline-outage"><!--x--></div>                <script type="text/javascript">
+                ssb = true;
+                </script>
+                <iframe src="https://beisprod.mtsu.edu/ssomanager/c/SSB?pkg=bwskotrn.P_ViewTermTran" title="Main Content" id="ssbiframe"></iframe>
+                <div class="clear"><!--x--></div>
+                		</div>
+	</div>
+    <script type="text/javascript">
+    var clicky_site_ids = clicky_site_ids || [];
+    clicky_site_ids.push(101072102);
+    (function() {
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = '//static.getclicky.com/js';
+    ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+    })();
+    </script>
+    <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101072102ns.gif" /></p></noscript>
+    <script src="maybe_files/alert.js"></script>
+
+
+</body></html>
