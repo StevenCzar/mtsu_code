@@ -15,8 +15,18 @@ int main()
 	//initialize things
 	int adj[10][10];
 	int apr[20][2];
-	int i, j, numNodes, numRows, temp;
-
+	int final[10];
+	int numNodes, numRows, temp, degree;
+	//make matrix 0's
+	for(int i = 0; i < 10; i++)
+	{
+		for(int j = 0; j < 10; j++)
+		{
+			adj[i][j] = 0;
+		}
+	}
+	
+	//basic i/o stuff
 	cout << "Please input the number of nodes: ";
 	cin >> numNodes;
 	cout << "Please input the number of rows in the matrix: ";
@@ -31,18 +41,44 @@ int main()
 		}
 	}
 
+	//create adjacency matrix from pseudocode
 	for(i=0; i<numRows;i++)
 	{
-		if(apr[i][1] != 0)
+		temp = apr[i][1];
+		while(temp!=0)
 		{
-			//change apr to be easier to parse
-			temp = apr[i][0];
-			apr[temp][0] = temp;
-			apr[temp][1] = apr[i][1];
-			cout << apr[i][0] << " " << apr[i][1] << endl;
+			adj[i][apr[temp][0]] = 1;
+			temp = apr[temp][1];
 		}
 	}
 
-
+	//from adjacency matrix, get degree and each adjacent node
+	for(i=0; i<numNodes; i++)
+	{
+		cout << "\n***Node " << i+1 << " information***\n";
+		degree = 0;
+		for(j=0; j<numNodes; j++)
+		{
+			if(adj[i][j] == 1)
+			{	
+				//gets adjacent node and places in array
+				final[degree] = j+1;
+				degree++;
+			}
+		}
+		//if the degree of the node is 0, print that it is isolated
+		if(degree == 0)
+		{
+			cout << i+1 << " is an isolated node \n";
+		}
+		//print out the degree of the node
+		cout << "Degree of node " << i+1 << " is: " << degree << endl;
+		//print the adjacent nodes
+		cout << "The nodes adjacent to node " << i+1 << " are: ";
+		for(j=0;j<=degree;j++)
+		{
+			cout << final[j] << " ";
+		}
+	}
 	return 0;
 }
