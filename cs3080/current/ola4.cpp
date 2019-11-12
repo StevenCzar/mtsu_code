@@ -16,11 +16,11 @@ int main()
 	int adj[10][10];
 	int apr[20][2];
 	int final[10];
-	int numNodes, numRows, temp, degree;
+	int i, j, numNodes, numRows, temp, degree;
 	//make matrix 0's
-	for(int i = 0; i < 10; i++)
+	for(i = 0; i < 10; i++)
 	{
-		for(int j = 0; j < 10; j++)
+		for(j = 0; j < 10; j++)
 		{
 			adj[i][j] = 0;
 		}
