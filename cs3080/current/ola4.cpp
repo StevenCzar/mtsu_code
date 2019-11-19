@@ -10,9 +10,9 @@
 #include <iomanip>
 using namespace std;
 
-void preorder(int tree[], int root)
-void inorder(int tree[], int root)
-void postorder(int tree[], int root)
+void preorder(int tree[][], int root);
+void inorder(int tree[][], int root);
+void postorder(int tree[][], int root);
 
 int main()
 {
@@ -41,7 +41,7 @@ int main()
 }
 
 //root, left, middle, right
-void preorder(int tree[], int root)
+void preorder(int tree[][], int root)
 {
 	cout << root+1 << " ";
 	if(tree[root][0]!=0)
@@ -60,7 +60,7 @@ void preorder(int tree[], int root)
 }
 
 //left, root, middle, right
-void inorder(int tree[], int root)
+void inorder(int tree[][], int root)
 {
 	if(tree[root][0]!=0)
 	{
@@ -79,7 +79,7 @@ void inorder(int tree[], int root)
 }
 
 //left, middle, right, root
-void postorder(int tree[], int root)
+void postorder(int tree[][], int root)
 {
 	if(tree[root][0]!=0)
 	{
