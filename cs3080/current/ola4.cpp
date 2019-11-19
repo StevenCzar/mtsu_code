@@ -21,7 +21,7 @@ int main()
 
 	cout << "Please input the number of nodes: ";
 	cin >> nodes;
-	cout << "Please input the tree array representation of the graph: ";
+	cout << "Please input the tree array representation of the graph: \n";
 	for(i=0; i<nodes; i++)
 	{
 		for(j=0; j<3; j++)
@@ -36,6 +36,7 @@ int main()
 	inorder(tree, 0);
 	cout << "\n the postorder traversial is: \n";
 	postorder(tree, 0);
+	cout << endl;
 
 	return 0;
 }
@@ -46,15 +47,15 @@ void preorder(int tree[][3], int root)
 	cout << root+1 << " ";
 	if(tree[root][0]!=0)
 	{
-		preorder(tree, tree[root][0]);
+		preorder(tree, (tree[root][0]-1));
 	}
 	if(tree[root][1]!=0)
 	{
-		preorder(tree, tree[root][1]);
+		preorder(tree, (tree[root][1]-1));
 	}
 	if(tree[root][2]!=0)
 	{
-		preorder(tree, tree[root][2]);
+		preorder(tree, (tree[root][2]-1));
 	}
 	return;
 }
@@ -64,16 +65,16 @@ void inorder(int tree[][3], int root)
 {
 	if(tree[root][0]!=0)
 	{
-		inorder(tree, tree[root][0]);
+		inorder(tree, (tree[root][0])-1);
 	}
 	cout << root+1 << " ";
 	if(tree[root][1]!=0)
 	{
-		inorder(tree, tree[root][1]);
+		inorder(tree, (tree[root][1])-1);
 	}
 	if(tree[root][2]!=0)
 	{
-		inorder(tree, tree[root][2]);
+		inorder(tree, (tree[root][2])-1);
 	}
 	return;
 }
@@ -83,15 +84,15 @@ void postorder(int tree[][3], int root)
 {
 	if(tree[root][0]!=0)
 	{
-		postorder(tree,tree[root][0]);
+		postorder(tree,(tree[root][0])-1);
 	}
 	if(tree[root][1]!=0)
 	{
-		postorder(tree,tree[root][1]);
+		postorder(tree,(tree[root][1])-1);
 	}
 	if(tree[root][2]!=0)
 	{
-		postorder(tree,tree[root][2]);
+		postorder(tree,(tree[root][2])-1);
 	}
 	cout << root+1 << " ";
 }
