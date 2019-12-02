@@ -43,6 +43,7 @@ int main()
 			}
 			cout << current[i];
 		}
+		cout << endl;
 
 		//convert hamming code to gray code
 		//p1 in array location 7 - checks locations: 7-11
