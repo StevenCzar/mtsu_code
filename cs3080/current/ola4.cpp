@@ -101,7 +101,6 @@ int main()
 		{
 			//gets position - if bit is 0, will always equal 0, if bit is 1, multiplies by 2^n
 			sum += parity[i] * (2^i);
-			cout << endl << sum << endl;
 		}
 
 		//if sum has a value
@@ -149,7 +148,6 @@ int main()
 						final[i] = 1;
 					}
 				}
-				cout << final[i];
 			}
 
 			//if excess-3 is just binary + 3, then I can convert to decimal now and subtract 3
@@ -161,7 +159,7 @@ int main()
 			{
 				//same logic as before to get position
 				sum += (final[i] * (2^i));
-				cout << endl << sum << endl;
+				cout << final[i] << endl;
 			}
 			//output the result as a char
 			cout << static_cast<char>(sum-3);
