@@ -160,6 +160,7 @@ int main()
 			{
 				//same logic as before to get position
 				sum += (final[i] * 2^i);
+				cout << sum;
 			}
 			//output the result as a char
 			cout << static_cast<char>(sum-3);
