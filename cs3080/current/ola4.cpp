@@ -148,6 +148,7 @@ int main()
 						final[i] = 1;
 					}
 				}
+				cout << final[i];
 			}
 
 			//if excess-3 is just binary + 3, then I can convert to decimal now and subtract 3
