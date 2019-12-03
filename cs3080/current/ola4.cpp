@@ -41,9 +41,7 @@ int main()
 			{
 				current[i] = 1;
 			}
-			cout << current[i];
 		}
-		cout << endl;
 
 		/*convert hamming code to gray code
 		p1 in array location 7 - checks locations: 7-11
@@ -142,12 +140,12 @@ int main()
 					//if sum is even, put a 0
 					if(sum%2 == 0)
 					{
-						current[j] = 0;
+						final[i] = 0;
 					}
 					//if sum is odd, put a 1
 					else
 					{
-						current[j] = 1;
+						final[i] = 1;
 					}
 				}
 			}
