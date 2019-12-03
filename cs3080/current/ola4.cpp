@@ -160,7 +160,7 @@ int main()
 			for(i=0; i<8; i++)
 			{
 				//same logic as before to get position
-				sum += (final[i] * 2^i);
+				sum += (final[i] * (2^i));
 				cout << endl << sum << endl;
 			}
 			//output the result as a char
