@@ -101,6 +101,7 @@ int main()
 		{
 			//gets position - if bit is 0, will always equal 0, if bit is 1, multiplies by 2^n
 			sum += parity[i] * (2^i);
+			cout << endl << sum << endl;
 		}
 
 		//if sum has a value
