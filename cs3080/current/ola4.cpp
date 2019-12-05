@@ -133,7 +133,7 @@ int main()
 		{
 			if(j!=7)
 			{
-				sum+=current[j]
+				sum+=current[j];
 				if(sum%2 == 0)
 				{
 					final[i] = 0;
