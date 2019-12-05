@@ -149,21 +149,20 @@ int main()
 					}
 				}
 			}
-
-			//if excess-3 is just binary + 3, then I can convert to decimal now and subtract 3
-			//final array should have excess-3 code stored in it
-
-			//reset sum to 0 again
-			sum=0;
-			for(i=0; i<8; i++)
-			{
-				//same logic as before to get position
-				sum += (final[i] * (2^i));
-				cout << final[i] << endl;
-			}
-			//output the result as a char
-			cout << static_cast<char>(sum-3);
 		}
+		//if excess-3 is just binary + 3, then I can convert to decimal now and subtract 3
+		//final array should have excess-3 code stored in it
+
+		//reset sum to 0 again
+		sum=0;
+		for(i=0; i<8; i++)
+		{
+			//same logic as before to get position
+			sum += (final[i] * (2^i));
+			cout << final[i] << endl;
+		}
+		//output the result as a char
+		cout << static_cast<char>(sum-3);
 	}
 	return 0;
 }
