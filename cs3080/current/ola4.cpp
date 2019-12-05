@@ -122,32 +122,34 @@ int main()
 		//first element is same as previous first element
 		//elements 0,1,3,and7 are parity bits to be removed
 		final[0] = current[2];
-		//set sum to 1 for checking
-		sum=1;
+		//set sum to 0 to final[0]
+		sum=final[0];
 		//other elements are: 1 if sum of current + previous elements is odd and 0 if even
 
 		//for loop to go through elements of final array
-		for(i=1; i<8; i++)
+		i=1;
+		int j=4;
+		while(i<8)
 		{
-			//for loop to go through elements of current array
-			//start at 4 because 2 is accounted for and 0,1,and 3 need to be removed
-			for(int j=4; j<12; j++)
+			if(j!=7)
 			{
-				//leave out element 7 cause it's a parity bit as well
-				if(j!=7)
+				sum+=current[j]
+				if(sum%2 == 0)
 				{
-					sum+=current[j];
-					//if sum is even, put a 0
-					if(sum%2 == 0)
-					{
-						final[i] = 0;
-					}
-					//if sum is odd, put a 1
-					else
-					{
-						final[i] = 1;
-					}
+					final[i] = 0;
+					i++;
+					j++;
 				}
+				else
+				{
+					final[i] = 1;
+					i++;
+					j++;
+				}
+			}
+			else
+			{
+				j++;
 			}
 		}
 		//if excess-3 is just binary + 3, then I can convert to decimal now and subtract 3
@@ -159,12 +161,12 @@ int main()
 		{
 			//same logic as before to get position
 			sum += (final[i] * (2^i));
-			cout << final[i] << endl;
+			cout << final[i];
 		}
+		cout << endl;
 		//output the result as a char
 		cout << static_cast<char>(sum-3);
 	}
-	cout << endl << endl;
 	return 0;
 }
 
