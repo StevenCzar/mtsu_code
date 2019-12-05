@@ -164,6 +164,7 @@ int main()
 		//output the result as a char
 		cout << static_cast<char>(sum-3);
 	}
+	cout << endl << endl;
 	return 0;
 }
 
