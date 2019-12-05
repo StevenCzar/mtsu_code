@@ -129,7 +129,7 @@ int main()
 		//for loop to go through elements of final array
 		i=1;
 		int j=4;
-		while(i<8)
+		do
 		{
 			if(j!=7)
 			{
@@ -151,7 +151,7 @@ int main()
 			{
 				j++;
 			}
-		}
+		}while(i<8);
 		//if excess-3 is just binary + 3, then I can convert to decimal now and subtract 3
 		//final array should have excess-3 code stored in it
 
