@@ -157,11 +157,13 @@ int main()
 
 		//reset sum to 0 again
 		sum=0;
-		for(i=0; i<8; i++)
+		j=7;
+		for(i=7; i<=0; i++)
 		{
 			//same logic as before to get position
-			sum += (final[i] * (2^i));
-			cout << final[i];
+			sum += (final[i] * (2^j));
+			j--;
+			cout << sum;
 		}
 		cout << endl;
 		//output the result as a char
